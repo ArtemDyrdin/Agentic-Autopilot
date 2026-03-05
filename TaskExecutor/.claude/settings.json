@@ -1,0 +1,47 @@
+{
+  "model": "claude-sonnet-4-20250514",
+  "permissions": {
+    "allow": [
+      "Bash([команда сборки] *)",
+      "Bash([команда тестов] *)",
+      "Bash([команда линтера] *)",
+      "Bash(git status)",
+      "Bash(git diff)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Read(**)",
+      "Write(src/**)",
+      "Write(.claude/**)",
+      "Write(BACKLOG.md)",
+      "Write(CLAUDE.md)",
+      "Edit(src/**)",
+      "Edit(BACKLOG.md)",
+      "Edit(CLAUDE.md)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Write(*credentials*)",
+      "Write(*.env*)",
+      "Write(*secret*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [{
+          "type": "command",
+          "command": "echo '[$(date +%H:%M:%S)] Bash команда выполнена' >> .claude/session.log"
+        }]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [{
+          "type": "command",
+          "command": "echo '[$(date +%H:%M:%S)] Сессия завершена' >> .claude/session.log"
+        }]
+      }
+    ]
+  }
+}
