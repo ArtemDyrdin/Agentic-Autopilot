@@ -1,0 +1,4140 @@
+1. Authentication/Create Account/Quiz/Create avatar​
+Visualization here
+1.1. Opening App​
+First Page
+Form Elements
+​
+
+•​
+
+Headline: “[P]ortal. Fits 4 you”
+
+•​
+
+Text: “Dress mindfully.”
+
+•
+
+Button: “Sign up”
+
+•
+
+Button: “Log in”
+
+1.2 Log in
+Form Elements
+•
+
+Button Back
+
+•
+
+Field: “Email”
+
+•
+
+Field: “Password”
+
+•
+
+Button: “Log in”
+
+•
+
+Button: “Log in with Apple”
+
+•
+
+Button: “Log in with Google”
+
+•
+
+Text : Don't have an account? Sign up
+
+Validation​
+​
+1. When the user presses the button “Log in” and at least one field is not filled, highlight the field
+borders in red. And display a warning in red "Please fill in the field"​
+​
+2. Email requirements: email name contains the @ sign and the domain contains ".", there must be at
+least two characters after the dot. There must not be more than one @ characters. Error message :
+“Please enter a valid email address”​
+3. Error message displays logic for password requirements: An error message for incorrect email
+appears after the user finishes entering the Password and Email fields and clicks the “Log in” button if
+the email entered does not meet the required criteria.
+
+4. If two fields are filled in incorrectly, then show an error for the wrong email
+5. If the email is not registered, display the error message: “Incorrect email or password. Please try
+again.”
+6. If the password entered by the user does not match the password that was previously entered for
+this email, display the error message: “Incorrect email or password. Please try again.”” and below
+under the field “Password” a link “ Forgot password?” appears.
+7. If there are server or network errors, the message “Registration failed. Please try again later.” is
+displayed.
+8. If the user is already registered and tries to register using the same email → An error code is
+displayed under the email field
+9. If a user attempts to enter an email address from an Apple domain, we display the error "User not
+found" under the email field.
+10. When deleting the application, upon re-downloading, the user begins to login again, he starts from
+the logging page (applicable for both iOS and Android)
+
+​
+​
+Log in first time​
+When a user successfully passes validation via email or Google/Apple account and password for the
+first time or clicks on the button, he is redirected to the page Create Account.
+
+Log in after onboarding
+Once a user has accessed the home page for the first time, he will be directed to the home page each
+time he accesses it.
+
+​
+​
+1.3.Forgot password
+Forgot password
+Form Elements
+•
+
+Button Back
+
+•
+
+Headline: “Reset Password”
+
+•
+
+Text: “Please enter your email to reset the password”
+
+•
+
+Field: “Email”
+
+•
+
+Button: “Reset password”
+
+Validation​
+​
+1. When the user presses the button “Reset password” and the field “Email” is not filled, highlight the
+field borders in red. And display a warning in red "Please fill in the field"
+2. Email requirements: email name contains the @ sign and the domain contains "." Error message :
+“Please enter a valid email address”
+Process​
+​
+After clicking the button “Reset password”, the user is sent an email with a code. Code the code must
+consist of 5 numbers​
+​
+Subject: Reset your password for [P]ortal​
+​
+Text:” Hello,
+Enter this code to reset your [P]ortal App password for your [Account name] account.​
+[Code]​
+If you didn’t ask to reset your password, you can ignore this email.
+Thanks,​
+Your [P]ortal App team”
+3. If the user enters the email address they used to register through the Apple/Google social network
+in the email field, the text "User not found" will be displayed under the email field.
+
+Check email
+Form Elements
+•
+
+Button Back
+
+•
+
+Headline: “Reset Password”
+
+•
+Text: ​
+“Check your email​
+A password reset request has been sent to your email. Check your email and enter the code from the
+email.​
+If you haven't received the letter, try sending the application again or log in in another way”
+•
+
+Field for code
+
+•
+
+Button: Verify code
+
+•
+
+Button: “Need a new code? Resend email”​
+
+​
+Validation:​
+​
+1. If the user has not entered 5 numbers, then the red text "Please enter the verification code." appears
+under the code entry field.
+2. If the code user entered was incorrect, a red text appears under the code entry field: "The code you
+entered is incorrect. Please try again."
+3. If the code has expired (24 hours have passed since the code was sent), then the red text "This code
+has expired. Please request a new one." appears under the code entry field.
+Process​
+When the user clicks on the Button: “Need a new code? Resend email” he sees a notification at the
+bottom that says "A new verification code has been sent to your email." The button becomes inactive
+and a countdown appears near, starting from 30 seconds.
+4. After clicking the Resend email button, a countdown appears under the button.​
+
+Set new password
+Form Elements
+•
+
+Headline: “Set New Password”
+
+•
+
+Text: “Create a new password. Ensure it differs from previous ones for security”
+
+•
+
+Field: “Password” (with visibility toggle)
+
+•
+
+Field: “Confirm Password” (with visibility toggle)
+
+•
+
+Button: “Update Password”
+
+Validation
+1.​ If the passwords do not match, display the error message: “Passwords do not match. Please
+enter the same password in both fields.”​
+2.​ Password requirements: The password must be 8–20 characters long and include a
+combination of letters, numbers, and symbols (at least two of the three).
+Error message: “Your password must be 8–20 characters long and include a combination of
+letters, numbers, and symbols (at least two of the three).”
+3.​ Error message displays logic for password requirements: The error message appears after the
+user finishes typing into the “Confirm password” field and shifts focus to the “Update
+Password” field, if the entered password does not meet the required criteria.The check occurs
+after clicking on “Update password” and the error is highlighted until the user enters the
+
+values ​corresponding to the validation.​
+4.​ Users cannot proceed unless both passwords match and meet the criteria.​
+​
+
+Password Reset Successful​
+​
+Form Elements
+•
+
+Headline: “Successful”
+
+•
+
+Text: “Congratulations! Your password has been changed. Click continue to log in”
+
+•
+
+Button: “Continue” (redirects to Login page)
+
+1.4.Sign Up
+Form Elements​
+​
+•
+Button Back
+•
+
+Page title: “[P]ortal”
+
+•
+
+Text: “Dress mindfully.”
+
+•
+
+Button: “Sign up with Apple”
+
+•
+
+Button: “Sign up with Google”
+
+•
+
+Button: “Sign up with Email”
+
+If the user clicks the button “Sign up with Apple”/“Sign up with Google” go to log in to the
+application via Apple/Google account.​
+​
+
+Sign up with Email​
+​
+​
+Flow: ​
+Click “Sign up with Email” -> System displays a popup with the button “Accept and Continue” ->
+System opens the Create Account screen (email sign-up form) -> screen “Check your email” -> screen
+success​
+
+​
+Form Elements of pop-up window​
+​
+•
+•
+
+Page title: “[P]ortal” Fits for your
+Text: “Dress mindfully.”
+
+•
+Text: “By signing up to Portal you are agreeing to our Terms and Conditions and for
+your personal data to be processed in accordance with our Privacy Policy​
+By using our social media sign up feature, you agree and consent that your personal data will be
+shared with Google and Apple in accordance with our privacy policy.”
+•
+
+Button: “Accept and Continue” (after clicking user sees next page:
+
+Form Elements of Create account
+​
+​
+•
+
+Button: Back (returns to previous page)​
+
+•
+
+Headline: Create account
+
+•
+
+Field: Email (with placeholder Enter your email)
+
+•
+
+Field: Password (with placeholder Enter your Password + with “eye” icon)
+
+•
+
+Field: Confirm password (with placeholder Confirm your Password + with “eye” icon)
+
+•
+Button: Continue)
+Validation:​
+​
+1.If the user has not passed validation for any of the fields, after clicking the Continue button, each
+field that has not passed validation is highlighted in red.
+2. Email requirements: email name contains the @ sign and the domain contains ".", there must be at
+least two characters after the dot. There must not be more than two @ characters. Error message :
+“Please enter a valid email address”
+3. If the entered email exists, display the error "This email exists. Enter a different one."​
+​
+4.If the passwords do not match, display the error message: “Passwords do not match. Please enter
+the same password in both fields.”​
+
+5.Password requirements: The password must be 8–20 characters long and include a combination of
+letters, numbers, and symbols (at least two of the three).
+
+Error message: “Your password must be 8–20 characters long and include a combination of letters,
+numbers, and symbols (at least two of the three).”​
+
+6. Users cannot proceed unless both passwords match and meet the criteria.​
+​
+When user clicks on Continue button he sees:
+​
+Form Elements Check your email
+•
+​
+•
+
+Button Back (returns to previous page)​
+
+•
+
+Text: “Check your email​
+We’ve sent a code to your email. Enter it to confirm the email change.”​
+
+Headline: Create account
+
+​
+•
+
+Field for 5 numbers
+
+•
+
+Button: Verify code
+
+•
+
+Button: Need a new code? Resend Email
+
+​
+​
+​
+Validation:​
+​
+1. If the user has not entered 5 numbers, then the red text "Please enter the verification code." appears
+under the code entry field.
+2. If the code user entered was incorrect, a red text appears under the code entry field: "The code you
+entered is incorrect. Please try again."
+3. If the code has expired (24 hours have passed since the code was sent), then the red text "This code
+has expired. Please request a new one." appears under the code entry field.
+Process​
+When the user clicks on the Button: “Need a new code? Resend email” he sees a notification at the
+bottom that says "A new verification code has been sent to your email." The button becomes inactive
+and a countdown appears near, starting from 30 seconds.
+4. After clicking the Resend email button, a countdown appears under the button.
+​
+​
+Form Element of Success screen
+
+•
+
+Text: “Your account has been created​
+Next, let’s set up your profile so your recommendations fit you perfectly.”
+
+•
+
+Button: Continue​
+
+​
+After clicking the Continue button, the user redirects to the Log in page.
+
+Sign up with Apple​
+For the first time (Iphone)
+For the first time opens modal window:​
+​
+Form Elements
+•
+​
+•
+
+Button Close (Close modal window)​
+
+•
+
+Portal Icon
+
+Headline: Sign up with Apple
+
+•
+Text : Create an account for the Portal app using your Apple Account [email
+name]@icloud.com
+•
+Field : ​
+Letter Icon -> Text:Show email address (check-box)​
+[email name]@icloud.com​
+​
+•
+Field :
+Text: Hide email address (check-box)​
+address to [email name]@icloud.com​
+
+•
+
+Button : Continue (Clicking button -> open notification window:​
+
+Form Elements
+•
+​
+•
+
+Information Icon​
+
+•
+
+Button : Yes (redirects to Create account page)
+
+Text: Would you like to create a new account?​
+You haven’t signed up with this APPLE account
+
+•
+
+Button : No (returns to the previous window))​
+
+Sign up when the account exists
+Form Elements
+•
+​
+•
+
+Button Close (Close modal window)​
+
+•
+
+Portal Icon
+
+•
+
+Text : Sign in to the app Portal with your Apple Account
+
+Headline: Sign up with Apple
+
+•
+Field : ​
+Apple profile Icon -> User name​
+your account
+When user clicks to his profile he goes to Home page
+
+For the first time (Android)
+For the first time opens modal window:​
+​
+Form Elements
+•
+
+Button Back (Close modal window)
+
+•
+
+Headline: Apple Account
+
+•
+​
+•
+
+Apple Icon​
+
+•
+
+Field: (placeholder - E-mail or phone number)
+
+Text: Use your Apple Account to sign in to the Portal app
+
+•
+Text : When you set up Sign in with Apple, information about your interactions with
+Apple and this device may be used by Apple to prevent fraud. How data is managed.(Redirects to
+Apple privacy page)
+•
+
+Button : Continue
+
+​
+Validation:​
+When user enters an email or phone number and clicks Continue button, the window looks like this:​
+
+​
+
+Elements
+•
+
+Button Back (Close modal window)
+
+•
+
+Headline: Apple Account
+
+•
+​
+•
+
+Apple Icon​
+
+•
+
+Field: (placeholder - E-mail or phone number)
+
+•
+
+Field: Password
+
+•
+
+Link: Forget password? (redirects to Apple page to change password)
+
+•
+
+Button : Continue
+
+Text: Use your Apple Account to sign in to the Portal app
+
+When user enter password and clicks Continue he redirects to page:​
+​
+Elements
+•
+
+Button Back (Close modal window)
+
+•
+
+Headline: Apple Account
+
+•
+
+Text: Two-factor authentication
+
+•
+
+6 numbers to enter
+
+•
+
+Text: Enter the verification code sent to your Apple devices.
+
+•
+
+Link: Resend the code to the devices (resend new code)
+
+•
+
+Link: No access to devices? (redirects to Apple page)
+
+After entering the code, the user follows the path as indicated here
+
+​
+Sign up with Google​
+For the first time (Iphone)
+For the first time opens modal window:​
+​
+​
+
+Form Elements
+•
+​
+•
+about you.
+
+Headline: The application Portal wants to use "google.com" to sign in.​
+Text: In this case, the application and the website will be allowed to share information
+
+•
+
+Button : Cancel (close window)​
+
+•
+
+Button : Continue
+
+​
+
+When clicking button Continue opens modal window:​
+​
+Form Elements
+•
+​
+•
+
+Button Back (returns to previous page)​
+
+•
+
+Headline : Choose Account
+
+•
+
+Text : to go to the Portal applications
+
+•
+
+Button : Current account (user name + email)
+
+•
+
+Button : Change account
+
+Google icon + text: Log in Google account
+
+When user clicks on Current Account button he sees modal window:​
+​
+•
+Button Back (returns to previous page)​
+​
+•
+Headline: Log in Portal app
+•
+
+Name of selected email
+
+•
+
+Text : Google will allow Portal to access the following information about you:
+
+•
+
+User name​
+Name and profile picture
+
+•
+
+Email​
+Email address
+
+•
+
+Text :​
+
+​
+Please review the Portal privacy policy and terms of service to learn how Portal processes and protects
+your data.
+You can change these settings at any time on your Google account page.
+Learn more about signing in with your Google account…
+•
+
+Button : Cancel (returns to previous page)
+
+•
+
+Button : Continue (the user follows the path as indicated here)
+
+If account exists, user pass the same flow as before, begins from here
+
+For the first time (Android)
+For the first time opens modal window:​
+​
+Form Elements
+•
+
+Button Back (Close modal window)
+
+•
+
+Portal Icon
+
+•
+
+Headline: Choose account to sign in to the Portal app
+
+•
+
+Field: User name​
+email
+
+•
+
+Button : Add account
+
+When user chooses current email he redirects to page:​
+​
+Form Elements
+•
+
+Portal Icon
+
+•
+
+Headline: Allow login to the Portal app using Google
+
+•
+
+Name of chosen email from previous item
+
+•
+
+Text:
+
+If you continue, Google will share your name, email address, and profile photo with the "Acloset"
+app. Please read the following documents for the "Portal" service: Privacy Policy and Terms of
+
+Service.​
+​
+You can manage the "Sign in with Google" feature in your Google Account.
+•
+
+Button: Cancel (returns to previous page)
+
+•
+
+Button: Accept and give access (redirects to Create account page)
+
+If account exists, user pass the same flow as before, begins from here
+
+1.5. Create Account
+Create Account (First step)
+Form Elements
+•
+​
+•
+
+Button Back​
+
+•
+
+Field : First name
+
+•
+
+Field : Last name
+
+•
+
+Field : User name
+
+•
+
+Field: Date of birth (placeholder “enter your birthdate” )
+
+•
+
+Text: Style preference
+
+•
+
+Button : Women’s
+
+•
+
+Button : Men’s
+
+•
+
+Button: All
+
+•
+
+Button: Continue
+
+Headline: Create account
+
+Validation
+1.​ Field: “Birthday ” must be filled in the format “MM/DD/YYYY” . When choosing a date of
+birth use the native picker. Default value = 01.01.2000​
+2.​ If the Field “Birthday (mm\dd\yyyy)*”/ First name/ Last name/User name/Style preference is
+not filled, then highlight the field borders in red when the user presses Button “Continue”.
+Text under empty field: "Enter value"​
+
+3.​ It is possible to select only one button (Women’s/Men’s/All)​
+4.​ Date of birth cannot be selected if the year starts on 18 or in the future​
+5.​ Сheck if the same user name exists. If there is a match by user name - the user name field is
+displayed along the border in red color and the text "This user name exists. Select another"
+appears below. The Save button becomes inactive​
+6.​ When user clicks the All button in Style preferences, a pop-up window with the text appears
+below:​
+​
+Form Elements​
+
+•
+
+Text: Please select which size chart you’d prefer us to use for the most accurate fit
+
+•
+
+Button : Men's (when entering sizes, categories for men will be shown here)
+
+•
+
+Button : Women's (when entering sizes, categories for women will be shown here)
+
+​
+​
+​
+Create Account (Second step)
+Form Elements
+•
+​
+•
+
+Button Back​
+
+•
+
+Text: Size unit preference description
+
+•
+
+Toggle switches: US
+
+•
+
+Toggle switches: EU
+
+•
+
+Toggle switches: UK
+
+•
+
+Button: Continue
+
+•
+
+Button: Skip
+
+Headline: Size settings
+
+Validation
+1.​ When one is selected, the following fields are displayed under chosen toggler: ​
+​
+
+•
+Field: Height - two fields (for height units ft and in; with placeholders e.g. 5 for fit
+and e.g. 5 for in) if was chosen UK or US / one field for cm (with placeholders e.g. 167) if
+was chosen EU
+•
+Field: Weight - one field (for weight unit lbs; with placeholders e.g. 121) and if was
+chosen UK or US / one field for kg (with placeholders e.g. ) if was chosen EU​
+
+•
+Field: Tops (information icon next to it, clicking on the icon, the table with
+compatible sizes appears , information is here)
+•
+
+Field: Bottoms (information icon next to it)
+
+•
+
+Field: Shoes (information icon next to it)
+
+•
+
+Button: Continue
+
+•
+Button: Skip​
+​
+Validation:​
+The user enters data using the keyboard. If the user has not filled in any of the fields, then
+when clicking the Continue button, the unfilled field is highlighted in red and the text "Fill in
+the value" appears under it
+
+2.​ Advanced settings​
+
+​
+Advanced settings only open the first time you open a chat with AI.​
+* Chest (information icon next to it)​
+* Waist (information icon next to it)​
+* Hips (information icon next to it)​
+* Inseam (information icon next to it)​
+* Shoulder width (information icon next to it)​
+* Back width (information icon next to it)​
+* Leg-to-torso ratio​
+* Shoes (check-box)​
+
+3.​ If the user chose here Style preference = Women’s shows the field “Cup size”. User can
+choose the sizes (buttons-bubbles):AA,A, B,C,D,DD,DDD/E,F,G,H,I, All​
+​
+4.​ When the user moves the Toggle switches: US he can choose the sizes (buttons-bubbles)​
+for tops: XXS, XS, S, M, L, XL, XXL, XXXL​
+for bottoms: XXS, XS, S, M, L, XL, XXL, XXXL​
+for shoes: 4; 4,5; 5; 5.5; 6; 6,5; 7; 7,5; 8; 8,5; 9; 9,5; 10; 10,5; 11; 11,5; 12; 12,5;13; 13,5 ​
+
+for chest:​
+- for women (in inch) : 28-30; 32-34; 36-38; 40-42; 44-46; 48-50; 52-54; 56-58; 60-62 ​
+- for men (in inch): 34-36; 38-40; 42-44; 46-48;50-52; 54-56; 58-60; 62-64​
+for waist:​
+- for women (in inch) : 23–24; 25–26½; 28-30; 32-34; 36-38; 40-42; 44-45; 46-47; 49-50​
+- for men (in inch):28–30; 32–34; 36–38; 42–44; 46–48; 50–52; 54–56; 58–60; 61-62​
+for hips: ​
+- for women ( in inch): 33–34; 35–36; 38–40; 42–44; 46–48; 52-53; 54-55; 56-57; 61-62​
+- for men ( in inch): 35–37; 39–41; 43–45; 47–49; 51–53; 54–56; 56–58; 58-60​
+for inseam:​
+- for women ( in inch): 27-28; 28-29; 29-30;30-31; 31-32; 30-31; 30-31½; 31-32; 31½-32½​
+- for men ( in inch): 28-29; 29-30; 30-31; 31-32; 32-33; 32-33; 32-33½; 33-34; 33-34½​
+for shoulder width: ​
+- for women ( in inch): 14–14½; 14½–15; 15½–16; 16½–17; 17½; 18; 18; 18½; 18½​
+- for men ( in inch): 15½–16; 16½–17; 17½–18; 18–18½; 19–20; 20–21; 21–21½; 22–22½​
+for back width: ​
+- for women ( in inch): 13½-14; 14-15; 15-16; 16-17; 17-18; 17-17½; 17½-18; 18-18 ½;
+18½-19​
+- for men ( in inch): 15½-16; 16-16½; 16½-17½; 17½-18; 18-19; 19-20; 20-21; 21-22; 22-23​
+for leg-to-torso ratio: if Style preference = Women’s:​
+> 2,00​
+1,97- 2,00 ​
+1,88 - 1,96;​
+if Style preference = Men’s:​
+> 1,99​
+1,92- 1,98 ​
+1,85 - 1,91;​
+When user clicked check-box “Shoes” he sees sees drop-down list with categories:​
+Boots / Clogs / Espadrilles / Flats / Pumps / Rain & Winter Boots / Sandals / Sneakers & Athletic ​
+For all of these categories dimensions are : 4; 4,5; 5; 5.5; 6; 6,5; 7; 7,5; 8; 8,5; 9; 9,5; 10; 10,5;
+11; 11,5; 12; 12,5;13; 13,5 ( show first 4 buttons-bubbles, near button “All sizes” after
+clicking - list:​
+Headline: name of the category in which the user specifies the sizes​
+Button Back​
+List of all sizes with button Select​
+Button Apply (return to previous page, with saved choice)​
+Button Clear (clear choice)​
+5.​ When the user moves the Toggle switches: UK he can choose the sizes (buttons-bubbles)​
+for tops: XXS, XS, S, M, L, XL, XXL, XXXL​
+for bottoms: XXS, XS, S, M, L, XL, XXL, XXXL​
+for shoes: 2; 2.5; 3; 3,5; 4; 4,5; 5; 5,5; 6; 6,5; 7; 7,5; 8; 8,5; 9; 9,5;10; 10,5; 11; 11,5 ​
+for chest:​
+- for women (in cm) : 71-76; 81-86;91.5-96.5; 101.5- 106.5;111.5-117; 122-127; 132-137;
+142-147; 152-158​
+- for men (in cm): 86-91.5; 96.5-101.5; 106.5-111.5;116.5-122; 127-132; 137-142; 147.5 152; 157,5-162.5​
+for waist:​
+
+- for women (in cm): 58.5–61; 63.5–67.5; 71–76; 81.5–86.5; 91.5–96.5;
+101.5–106.5;111.5–114; 116.5–119; 124–127​
+- for men (in cm): 71–76; 81.5–86.5; 91.5–96.5; 106.5–112; 117–122; 127–132; 137–142;
+147.5–152.5;​
+for hips:​
+- for women (in cm): 83.5–86; 89–91.5; 96.5–101.5; 106.5–111.5, 116.5–122; 132–134.5;
+137–139.5; 142–144.5; 155–157​
+- for men (in cm): 89–94; 99–104; 109–114; 119–124.5; 129–134; 137–142; 142–147.5;
+147.5–152.5​
+for inseam:​
+- for women (in cm): 69-71; 71-74; 74-76; 76-79; 79-81; 76-79; 76-80; 79-81; 80-83​
+- for men (in cm): 71-74; 74-76; 76-79; 79-81; 81-84; 81-84;81-85; 84-86; 84-88​
+for shoulder width:​
+- for women (in cm): 35.5–37; 37–38; 39.5–40.5; 42–43; 44.5; 45.5; 45.5; 47; 47​
+- for men ( in cm): 39.5–40.5; 42–43; 44.5–45.5; 45.5–47; 48–51; 48–51; 51–54.5; 56–57​
+for back width:​
+- for women (in cm): 34-36; 36-38; 38-41; 41-43; 43-46; 43-44; 44-46; 46-47; 47-48.5​
+- for men (in cm): 39-41; 41-42; 42-44; 44-46; 46-48; 48-51; 51-53.5; 53.5-56; 56-58,5​
+for leg-to-torso ratio: if Style preference = Women’s:​
+> 2,00​
+1,97- 2,00 ​
+1,88 - 1,96;​
+> 1,99​
+1,92- 1,98 ​
+1,85 - 1,91;​
+When user click if Style preference = Men’s:​
+ed check-box “Shoes” he sees sees drop-down list with categories:​
+Boots / Clogs / Espadrilles / Flats / Pumps / Rain & Winter Boots / Sandals / Sneakers & Athletic ​
+For all of these categories dimensions are : 2; 2.5; 3; 3,5; 4; 4,5; 5; 5,5; 6; 6,5; 7; 7,5; 8; 8,5;
+9; 9,5;10; 10,5; 11; 11,5 ( show first 4 buttons-bubbles, near button “All sizes” after clicking list:​
+Headline: name of the category in which the user specifies the sizes ​
+Button Back​
+List of all sizes with button Select​
+Button Apply (return to previous page, with saved choice)​
+Button Clear (clear choice)​
+​
+6.​ When the user moves the Toggle switches: EU he can choose the sizes (buttons-bubbles)​
+for tops: XS, S, M, L, XL, XXL, XXXL, XXXXL, XXXXXL​
+for bottoms: XS, S, M, L, XL, XXL, XXXL, XXXXL, XXXXXL​
+for shoes:: 34; 34,5; 35;35,5; 36; 36,5; 37; 37,5; 38; 38,5; 39; 39,5; 40; 40,5; 41; 41,5; 42;
+42,5; 43; 43,5; 44; 44,5; 45; 45,5; 46​
+for chest​
+- for women (in cm) : 71-76; 81-86;91.5-96.5; 101.5- 106.5;111.5-117; 122-127; 132-137;
+142-147; 152-158​
+- for men (in cm): 86-91.5; 96.5-101.5; 106.5-111.5;116.5-122; 127-132; 137-142; 147.5 152; 157,5-162.5​
+
+for waist:​
+- for women (in cm): 58.5–61; 63.5–67.5; 71–76; 81.5–86.5; 91.5–96.5; 101.5–106.5;
+111.5–114; 116.5–119; 124–127​
+- for men (in cm): 71–76; 81.5–86.5; 91.5–96.5; 106.5–112; 117–122; 127–132; 137–142;
+147.5–152.5​
+for hips:​
+- for women (in cm): 83.5–86; 89–91.5; 96.5–101.5; 106.5–111.5, 116.5–122; 132–134.5;
+137–139.5; 142–144.5; 155–157​
+- for men (in cm): 89–94; 99–104; 109–114; 119–124.5; 129–134; 137–142; 142–147.5;
+147.5–152.5​
+for inseam:​
+- for women (in cm): 69-71; 71-74; 74-76; 76-79; 79-81; 76-79; 76-80; 79-81; 80-83​
+- for men (in cm): 71-74; 74-76; 76-79; 79-81; 81-84; 81-84;81-85; 84-86; 84-88​
+for shoulder width: ​
+- for women (in cm): 35.5–37; 37–38; 39.5–40.5; 42–43; 44.5; 45.5; 45.5; 47; 47​
+- for men ( in cm): 39.5–40.5; 42–43; 44.5–45.5; 45.5–47; 48–51; 48–51; 51–54.5; 56–57​
+for back width:​
+- for women (in cm): 34-36; 36-38; 38-41; 41-43; 43-46; 43-44; 44-46; 46-47; 47-48.5​
+- for men (in cm): 39-41; 41-42; 42-44; 44-46; 46-48; 48-51; 51-53.5; 53.5-56; 56-58,5​
+for leg-to-torso ratio: if Style preference = Women’s:​
+> 2,00​
+1,97- 2,00 ​
+1,88 - 1,96;​
+if Style preference = Men’s:​
+> 1,99​
+1,92- 1,98 ​
+1,85 - 1,91;​
+When user clicked check-box “Shoes” he sees sees drop-down list with categories:​
+Boots / Clogs / Espadrilles / Flats / Pumps / Rain & Winter Boots / Sandals / Sneakers & Athletic ​
+For all of these categories dimensions are :34; 34,5; 35;35,5; 36; 36,5; 37; 37,5; 38; 38,5; 39;
+39,5; 40; 40,5; 41; 41,5; 42; 42,5; 43; 43,5; 44; 44,5; 45; 45,5; 46 ( show first 4
+buttons-bubbles, near button “All sizes” after clicking - list:​
+Headline: name of the category in which the user specifies the sizes​
+Button Back​
+List of all sizes with button Select​
+Button Apply (return to previous page, with saved choice)​
+Button Clear (clear choice)
+Process​
+When the user enters their sizes in the Tops and Bottoms category, the advanced settings are
+filled with digital values ​according to the sizes previously specified in the Tops and Bottoms
+category. ​
+Example: A man who specifies his size in Tops as L and the measurement unit EU receives a
+pre-filled waist value of 36-38 cm.​
+
+7.​ The user can select multiple sizes. Limit - 3 choices.
+
+If the user has selected more than three, a modal window appears ​
+Form Elements
+•
+​
+•
+
+Button: Close​
+Text: You can select up to 3 size options
+
+8.​ After clicking button Continue appears onboarding pop-up:​
+​
+Form Elements
+•
+​
+•
+
+Button: Skip​
+
+•
+
+Text: Just 10 quick questions.
+
+Headline: Let’s tailor your unique style
+
+9.​ Height units for UK/US - feet, for Europe - cm, for weight UK/US - pounds, for Europe - kg
+
+1.6. Quiz​
+Quiz only opens the first time you open a chat with AI.​
+Answers to questions are mandatory. The user cannot proceed to the next question without answering
+(selecting) the question.
+•
+​
+•
+
+Button Back (previous page)​
+
+•
+
+Button: Start Style Quiz
+
+•
+
+Button: Skip
+
+Text: Let’s define your unique style. Just 10 quick questions
+
+Form Elements of quiz page
+•
+
+Button Back (previous page)
+
+•
+
+Fill scale (consists of 10 elements, shows what stage the user is at)
+
+•
+
+Question from a quiz (scale/choice and pictures/choice from answers)
+
+•
+answer)
+
+Button : Back (inactive for first question, returns to previous question, keeping user's
+
+•
+Button: Next (for the last question it changes to the Complete button (takes you to the
+next page. The Next button is disabled until at least one option is selected)
+
+1.7. Create avatar
+Form Elements
+•
+​
+•
+
+Button Back​
+
+•
+
+Text: “Generate a semi-realistic visual of your body to better see how outfits will fit.”
+
+•
+
+Button: Upload photo ; Text under: “Full-body picture in tight clothing or swimsuit”
+
+•
+
+Button: Scan body; Text under: “Wear form-fitting attire and use your camera”
+
+Headline: Create account
+
+•
+Text: Your body data stays completely private. This tool is here to help you feel more
+confident in your style.
+•
+
+Button: Enter manually
+
+•
+Text: Your body data stays completely private. This tool is here to help you feel more
+confident in your style.
+•
+
+Button: Skip
+
+Important for the first visit
+When the user opens the avatar creation screen and selects one of the options:
+Upload photo
+Scan body
+Enter manually
+A check is performed to see if the user has filled in their height and weight during onboarding.​
+​
+If height/weight are not filled in
+Show a modal window:​
+​
+Form Elements
+•
+
+Button Close (close the window)
+
+•
+Text: To create a more realistic avatar and to generate accurate recommendations and
+build your style, please complete the dimension settings.
+•
+Button: Fill in details (The user returns to the settings, fills in the height/weight
+information, and clicks "Continue."
+
+Then he returns to the avatar creation screen, where he continues the process described below)
+•
+
+Button: Skip (close the window)​
+
+​
+
+Validation​
+​
+​
+1. When the user clicks the "Upload photo" button he sees page:​
+Form Elements
+•
+
+Button Back
+
+•
+
+Headline: Create avatar
+
+•
+
+Gallery and photos of the user from his mobile device
+
+•
+Button: Next (becomes active only when the user selects an avatar, only one avatar is
+available for selection)​
+​
+When the user clicks on the next button he goes to the page:​
+​
+Form Elements
+•
+
+Button Back (return to previous page)
+
+•
+
+Headline: Create avatar
+
+•
+Picture of avatar (at the time of creating the avatar will be loading screen and text
+appear: ​
+“Creating your avatar…
+This may take up to 3 minutes. Please keep this screen open.” and the Button “Try again” becomes
+active.”​
+•
+
+Toggle switcher: Blurred face
+
+•
+
+Button Try again
+
+•
+
+Button Save
+
+​
+
+Validation​
+1.1 If user fail to create an avatar, then instead of an image, a loading screen and text appear: ​
+“We couldn’t create your avatar.​
+Photo requirements:​
+Full-body photo in tight clothing or swimsuit
+
+Standing straight, body fully visible
+Arms relaxed along the body, wrists visible
+Legs straight, not crossed
+You can also choose another way to create your avatar.​
+[Picture of avatar]​
+text: *pose example​
+1.2 When the user clicks the "Try again" button, return to the previous page.​
+1.3. When the user clicks on the Blurred face toggle, the avatar's face becomes blurred.​
+​
+Process​
+Automatic skin tone detection (without the ability to change the tone) and create a realistic avatar​
+​
+2. When the user clicks the "Scan body" button he sees page:​
+• text “Put the phone​
+And stand in the center to successfully complete the scan”​
++ opportunity to skip​
+after skipping he has an opportunity to use his device camera ​
+​
+When the user took photo he goes to the page​
+Form Elements
+•
+
+Button Back (return to previous page)
+
+•
+
+Headline: Create avatar
+
+•
+Picture of avatar (at the time of creating the avatar will be loading screen and text
+appear: ​
+“Creating your avatar…
+This may take up to 3 minutes. Please keep this screen open.” and the Button “Try again” becomes
+active.”​
+•
+
+Toggle switcher: Blurred face
+
+•
+
+Button Try again
+
+•
+
+Button Save​
+
+Validation​
+2.1 If user fail to create an avatar, then instead of an image, a loading screen and text appear: ​
+“We couldn’t create your avatar.​
+Photo requirements:​
+Full-body photo in tight clothing or swimsuit
+Standing straight, body fully visible
+Arms relaxed along the body, wrists visible
+Legs straight, not crossed
+You can also choose another way to create your avatar.​
+[Picture of avatar]​
+
+text: *pose example​
+2.2 When the user clicks the "Try again" button, return to the previous page.​
+2.3 When the user clicks on the Blurred face toggle, the avatar's face becomes blurred.​
+Process​
+Automatic skin tone detection (without the ability to change the tone) and create a realistic avatar​
+
+3. When the user clicks the "Enter manually" button he redirects to the page:
+Form Elements
+•
+
+Button Back (return to previous page)
+
+•
+Headline: ​
+ATTENTION!​
+An avatar created based on manual input may be less accurate compared to one generated from a
+photo or body scan.
+•
+
+Button Continue
+
+When the user clicks the "Continue" button he redirects to the page:​
+​
+Form Elements Enter manually
+•
+
+Button Back (return to previous page)
+
+•
+
+Headline: Create avatar
+
+•
+Field: Height - two fields (for height units ft and in; with placeholders e.g. 5 for fit and
+e.g. 5 for in) if was chosen UK or US / one field for cm (with placeholders e.g. 167) if was chosen EU
+•
+Field: Weight - one field (for weight unit lbs; with placeholders e.g. 121) and if was
+chosen UK or US / one field for kg (with placeholders e.g. ) if was chosen EU
+
+•
+
+Skin color drop-down list with placeholder : select color
+
+When you click on the list, a list of colors appears in the form of a bubble with the name of the color
+and the image of the color. There are 16 of them. You can choose 1. List: Porcelain/ Ivory/ Fair Rose/
+Fair Golden/ Light Beige/ Light Olive/ Medium Beige/ Medium Warm/ Medium Olive/ Tan Golden/ Tan
+Red/ Deep Caramel/ Deep Bronze/ Dark Walnut/ Dark Espresso/ Deep Ebony
+•
+Drop-down list appears with five options:​
+- Rectangle - approximately the same waist, chest and hips.​
+- Triangle - shoulders and bust wider than hips.​
+- Hourglass - narrow waist, equal chest and hips.​
+- Apple - approximately the same waist, chest and hips with a smooth line.​
+- Pear - narrow shoulders, wide hips.​
+
+•
+Button: Next (becomes active only when the user filled in all the fields, if not - then
+highlight the empty fields with a red outline and at the bottom of the field the inscription appears in
+red lights: Enter the value)
+Validation
+If the user filled in the weight and height fields at the account creation stage, the data should be
+pre-filled with the values ​entered earlier​
+​
+When the user clicks on the Next button he goes to the page:​
+​
+Form Elements
+•
+
+Button Back (return to previous page)
+
+•
+
+Headline: Create avatar
+
+•
+Picture of avatar (at the time of creating the avatar will be loading screen and text
+appear: ​
+“Creating your avatar…
+This may take up to 3 minutes. Please keep this screen open.” and the Button “Try again” becomes
+active.”​
+•
+
+Button Try again
+
+•
+
+Button Save​
+
+​
+3.1 When the user clicks the "Try again" button, return to the previous page.​
+​
+Process​
+1. After entering choosing your body type, the AI selects a suitable avatar from the available ones
+2. Generated default avatars with blurred faces
+3. Fields height and weight ​should be automatically pulled from the dimension settings.
+The user cannot change height and weight on the manual input screen - he can only enter other
+parameters.​
+​
+4. More rules of creation Avatar here
+5. During registration, there are four sequential blocks: Sign up, Dimensions, Quiz, and Avatar. If the
+user completes any block or clicks the Skip button for that block, upon their next login or app launch,
+the user should be directed to the next incomplete block in the sequence. The process continues until
+all blocks are either completed or skipped.
+6.If a user enters incorrect data (for example, a non-numeric value for height or weight) and receives
+an error message: the field data is highlighted in red and the text below says: Please enter the correct
+value
+
+7. Avatars are generated in standardized clothing.
+8. After saving the avatar, the user sees a screen:​
+Form Elements
+•
+
+Button Close (closes window)
+
+•
+
+Headline: Start Building Your Wardrobe
+
+•
+Text: Adding your first item helps us build your wardrobe so your app never feels
+empty from day one.
+•
+
+Button Add Item now
+
+•
+
+Button Close
+
+9. If the user leaves the app and doesn't complete all the screens before reaching the home page,
+pressing the back button returns them to the previous screen:
+Screen order:​
+​
+Create Account -> Dimensions -> Avatar
+
+2.Home page
+2.1.First visit to home page​
+
+​
+1. Plans pop up
+Form Elements​
+•
+​
+•
+
+Button Close (close pop up)​
+Headline: “Start for free or unlock unlimited AI styling with Pro”
+
+•
+Text: Free users get up to 15 AI outfit suggestions per month. With Pro, there are no
+limits — and your looks get smarter every time.
+​
+•
+
+Button Yearly (placeholder: $99.99​
+
+$8.25 / month) This button is selected by default
+•
+
+Button Monthly (placeholder: $8.99)
+
+•
+
+Text: What’s uncluded in Pro​
+
+​ Unlimited AI outfits generations every day
+​ Longer, more tailored responses that understand your style
+Button: Continue (transfer to the payment method depending on the plan selected)​
+Button: Stay for free (next onboarding pop-up)
+
+2. Notifications pop-up:​
+​
+Form Elements ( pop-up window)
+•
+​
+•
+
+Button Close ​
+
+•
+
+Text: “Enable notifications for daily outfit tips, fit check reminders, and more!”
+
+•
+
+Picture
+
+•
+
+Button: Allow notification (redirects to Notification page)
+
+•
+
+Button: Another time (all notification settings are in disabled mode)
+
+Headline: “Stay in style, every day..”
+
+3. Location pop up
+Appears only after completing onboarding and when user first enters the main screen​
+​
+Form Element ​
+​
+•
+Text: “Make Your Looks Weather-Smart​
+To suggest outfits that match your local weather, [P]ortal needs access to your
+location.”
+•
+Button: Allow
+•
+
+Button: Skip​
+
+​
+Process​
+1.When the button “Allow” was pressed by the user, he will see modal window:​
+Form Element ​
+•
+Text: Allow the «Portal» app to use your geolocation?​
+​
+•
+Button: Allow once
+•
+
+Button: Allow While Using App
+
+•
+
+Button: Don’t Allow​
+
+​
+The user's choice determines the application's access to the user's geolocation​
+2. When the button “Skip” was pressed by the user, he redirects to the page
+In Fit check section is shown:​
+A gray mannequin silhouette icon (soft edges, minimal outline) centered.
+For Clothing Section is shown is shown:​
+For each category (Tops, Bottoms, Dresses, etc.), use a light gray category icon:
+●​
+●​
+●​
+●​
+●​
+
+T-shirt for Tops
+Pants for Bottoms
+Dress silhouette for Dresses
+Shoe for Shoes
+Handbag for Accessories
+
+​
+
+2.2.Home page structure
+​
+
+​
+•
+
+City of location
+
+•
+
+Temperature (day/night)
+
+•
+
+Bell icon for notifications (if there were notifications - display a dot)
+
+•
+
+Profile icon (when pressed , redirects to the profile page)​
+
+​
+
+​
+•
+
+Headline: Fit Checks
+
+•
+
+Button to go to Fit Checks page
+
+•
+Pictures (endless carousel) + swipe function (show all pictures that the user has on the Fit
+Checks page)​
+​
+Validation​
+​
+If the user visits the page for the first time, then he is shown:​
+A gray mannequin silhouette icon (soft edges, minimal outline) centered.
+Text Below:
+“Add new fit check”.
+When users upload their first Fit Check, this disappears.
+
+•
+
+Headline: [P]ortal Stylist
+
+•
+page​
+​
+
+Search string: Placeholder = “Looking for a look? Start typing” + Button to go to AI Stylist
+
+•
+
+Headline: Clothing
+
+•
+
+Button to go to Item page
+
+•
+Pictures with endless carousel + swipe function (show all pictures that the user has on the
+Item page)
+If the user visits the page for the first time, then he is shown:​
+A gray shirt icon (soft edges, minimal outline) centered.​
+​
+Text Below:
+“Add new item”.
+When users upload their first Item, this disappears.
+​
+
+TabBar ​
+
+•
+​
+•
+
+Button Home (the user is on it by default when logging in)​
+
+•
+
+Button Plus
+
+•
+
+Button Stylist (redirects to page AI Stylist)
+
+•
+
+Button Feed (redirects to page Feed)
+
+•
+
+Button Closet (redirects to page Closet)
+
+Button Feed ( redirects to page Feed)
+
+Validation​
+1. When user clicks Plus Button he sees a modal window:​
+​
+•
+Button Add Fit check
+•
+
+Button Add Item
+
+•
+Button New Post​
+​
+1.1.If the user clicks Button Add Fit check he redirects here
+1.2.If the user clicks Button Add Item he redirects here
+1.3.If the user clicks Button New Post he redirects to this page​
+​
+Then the user selects the collection from which he wants to select an image. After selecting collection
+he sees modal window: ​
+Text: Add up to 5 photos to your post​
+Tell your story through the details!​
+Button: OK (Close window)​
+​
+After selecting pictures he redirects to to this page​
+
+2. If the location was not selected in the profile, then do not display the temperature and location, but
+show the "-" icon
+3. When user clicks on Bell icon for notifications he redirects to the page:​
+Form Elements​
+
+​
+•
+
+Button: Back
+
+•
+
+Headline: Notifications
+
+•
+List of all notifications + ability to scroll (if this notification was clicked, the
+background of the message becomes light)
+4. All created or saved fit checks/outfits/items/posts from the feed are saved automatically in the All
+collection in the corresponding block.
+
+3. Profile settings
+Form Elements​
+​
+•
+Profile avatar + with status (first status depends on the choice at this stage)
+•
+
+Text: Name (first value is taken from those specified at this stage)
+
+•
+
+Button: See public profile
+
+•
+
+Button: Edit profile
+
+•
+
+Headline: Account settings
+
+•
+
+Button: My avatar ( redirects to page Create avatar)
+
+•
+
+Button: AI Stylist
+
+•
+
+Button: My Sizes
+
+•
+
+Headline: Preferences
+
+•
+
+Button: Temperature unit
+
+•
+
+Toggle switches: Notifications
+
+•
+
+Toggle switches: Device Location (indicate previous choice)
+
+•
+
+Headline: Subscription
+
+•
+
+Button: Free (with text “Upgrade”) / Pro (with text “Manage”)
+
+•
+Button: Outfit generations (with number of x/y; where is x-number of outfit
+generations for month, y -15) / Unlimit
+•
+
+Headline: Support
+
+•
+
+Button: FAQs (list of the question s)
+
+•
+
+Button: Terms of service
+
+•
+
+Button: Help & Feedback
+
+•
+
+Button: Log out
+
+Validation​
+​
+1.When the user clicks on the avatar icon he can upload a photo, a window appears in front of him.A
+photo upload window appears (the "Upload photo" button and text under “Photo must be in jpg, png,
+heic format and the size less than 10 mb. and the user selects a photo).
+2.When a user opens their profile for the first time, their initials are displayed in place of the icon
+3.If the user has uploaded a photo and it does not meet the conditions for adding, then issue a warning
+“Photo must be in jpg, png, heic format and the size less than 10 mb.”
+4.The user can move the photo, including zoom in/out, to select the part of the photo to display for the
+avatar
+5. When you open a question in the FAQ, the answer to only one question is displayed.
+
+​
+3.1. Public Profile
+Form Elements
+•
+
+Button: Back
+
+•
+
+Headline: Public Profile
+
+•
+
+Profile Image
+
+•
+
+User Name (From Edit profile -> User Name)
+
+•
+
+Number of followers
+
+•
+
+Number of following
+
+•
+
+Button Follow/Following (available only if it's someone else's profile)
+
+•
+User’s content (In the form of tiles with published content) -> The content list is sorted by
+date added: specifically from left (new content) to right (old content) and from top(new content) to
+bottom(old content).
+
+Process
+
+If this is a user profile, when clicking on the fit check image, the user sees two buttons Edit and
+Delete. When clicking on the Edit button, the user sees:
+Form Elements
+•
+
+Button: Back
+
+•
+
+The same structure as in Fit Check
+
+Validation​
+If the user changes the description and presses the back button and does not press the Save button, he
+is shown a notification: "Are you sure you want to leave the page? Changes will not be accepted" and
+two buttons "Yes " and "No ". When you press "No" - the notification disappears, when you press
+"Yes" the User will return to the Profile ​
+​
+When clicking on the Delete button, the user sees the message “Are you sure?” + two buttons ​
+“Yes”/”No”​
+If he presses “Yes” - Post will be deleted (If user deletes any of the entities that make up a post (fit
+check, item, outfit), these entities are not deleted from the post.)​
+If he presses “No” - he will be redirected to public profile​
+​
+If it’s not a user profile he sees pictures without the function edit or delete.​
+​
+Validation
+When the user clicks on the field with the number of followers or the number of following, he gets to
+the page:​
+​
+Form Elements
+•
+
+Button: Back
+
+•
+
+Two Tabs: Followers/Following
+
+•
+List of followers ( User’s profile icon, user name + button follow/ following)/ List of
+following ( User’s profile icon, user name + button follow/ following)
+Validation
+1.If the user is in someone else's profile and clicked Follow, then this user will appear in the user list,
+if he clicked Following, then this user will disappear.
+2. If the user is in someone else's profile and this user does not have followers/ following, then the
+following message appears: No one follows [User_Name] yet / [User_Name] is not following anyone
+yet
+3. If the user is in his profile and he does not have followers or following, then the following message
+appears: No one is following you yet/ You are not following anyone​
+
+3.2. Notifications page
+Form Elements
+•
+
+Button: Back
+
+•
+
+Headline: Settings
+
+•
+
+Toggle switches: Daily Suggestions
+
+•
+
+Toggle switches: Fit Check Reminders
+
+•
+
+Toggle switches: Style Tips
+
+•
+
+Toggle switches: Portal Announcements​
+
+​
+Validation ​
+Below each switch, the text indicates what notification sending algorithm is:​
+​
+A. Daily Suggestions ​
+​
+When the user clicks on Toggle switches: Daily Suggestions he sees three Toggle switches:​
+•
+Morning ​
+•
+Midday ​
+•
+Night​
+
+● Morning (7:30–8:30 am)
+○ Based on local weather and location
+○ Example:
+“Good morning! It’s breezy today. Want a layered look idea?”
+
+● Midday (12–2pm)
+○ Fun, spontaneous suggestion or wardrobe insight
+○ Example:
+“Switch it up: Here’s a new way to wear your favorite blazer.”
+
+● Evening (8 – 9:30pm)
+
+○ Ask about upcoming plans for tonight/tomorrow
+○ Example:
+“Any plans tomorrow? I can help you style the perfect look.”
+
+B. Fit Check Reminders
+● Weekdays (Sunday–Wednesday) at 10:00am
+○ e.g. “Don’t forget your Fit Check! Add your outfit to your calendar.”
+● Weekends (Thursday–Saturday) at 7:00pm
+○ e.g “Before you head out... Capture today’s look!”
+
+C. Optional Style Tips
+● These are lightweight and inspiring—2–3 per week max
+● Example:
+“Try combining one bold color with your neutrals this week.”
+​
+D. Portal Announcements​
+​
+“Notifications that relate to innovations in the application”​
+​
+Process​
+1. Sending depends on the user's choice
+2. If a user visits the notifications page and all notifications were previously turned off, he sees a
+modal window:​
+​
+Text:​
+Portal notifications are turned off in your phone settings. Turn them on in Settings > Notifications >
+Portal​
+Button: OK (When clicked, the user is redirected to the phone settings to enable notifications for the
+application.)
+3. The user goes to a page where the current notification settings are displayed
+
+​
+3.3.Edit profile
+Form Elements​
+​
+•
+Button : Profile icon
+•
+
+Button : Upload picture
+
+•
+
+Toggle switches: Use my avatar as profile icon
+
+•
+
+Button : First name (placeholder with current name)
+
+•
+
+Button : Last name (placeholder with current name)
+
+•
+
+Button : User name (placeholder with current name)
+
+•
+
+Button : Personal Data
+
+•
+
+Button: Delete profile
+
+Validation
+1.​ When the user clicks the “Profile icon” the user is taken to the Smartphone gallery screen.
+Opportunity to select only one photo. After selecting, this photo becomes a profile icon​
+2.​ When the user presses “User name” button he redirects to to page:​
+Form Elements
+•
+
+Headline: User name
+
+•
+
+Button: Back (previous page)
+
+•
+Field User name​
+Text below: User name must be 5-15 characters long and can only include letters, numbers,
+underscores (_), and periods (.).
+•
+
+Button: Save
+
+Validation
+The Save button becomes active only if validation is passed and there are no matches by
+name. If there are matches, then a notification appears "this name is taken, choose another" +
+close button (when clicked, the notification disappears)​
+​
+
+3.​ When the user presses “Button: First name” or “Button: Last name” he redirects to to page:​
+Form Elements
+•
+
+Headline: First/Last name
+
+•
+
+Button: Back (previous page)
+
+•
+Field User name​
+​
+•
+Button: Save ​
+​
+Validation
+The value in the field cannot be empty. The save button becomes inactive and the notification
+"Enter a value" appears + close button (when clicked, the notification disappears)​
+
+4.​ When the user presses “Button: Personal Data” he redirects to page:
+​
+
+3.3.1.Personal Data​
+Form Elements
+•
+
+Headline: Personal data
+
+•
+
+Button: Back (previous page)
+
+•
+
+Text: Login method​
+SNS integration​
+Button: Change login method​
+
+•
+​
+•
+•
+
+Button: Email (placeholder with current email)
+Button: Birthdate (placeholder with current value)
+
+•
+Button: Style preference (placeholder with current value)​
+​
+When user clicks on the button Style Preference a modal window appears:
+Form Elements
+•
+
+Headline: Style
+
+•
+
+Button: Back (previous page)
+
+•
+
+Text: Style preference
+
+•
+
+Bubble: Women’s
+
+•
+
+Bubble: Men’s
+
+•
+
+Bubble: All
+
+•
+
+Text: Style preference will affect the quiz, AI assistant, and size settings.
+
+When user clicks the All button in Style preferences, a pop-up window with the text appears below:​
+​
+Form Elements​
+
+•
+
+Text: Please select which size chart you’d prefer us to use for the most accurate fit
+
+•
+
+Button : Men's (when entering sizes, categories for men will be shown here)
+
+•
+
+Button : Women's (when entering sizes, categories for women will be shown here)
+
+​
+When user changes his choice a modal window appears:
+•
+Text: If you change your style preference, your quiz answers, avatar and sizes will be
+cleared. You’ll be asked to complete them again.
+•
+
+Button: Cancel (previous page)
+
+•
+Text: Confirm Change (all previous settings will be cleared (measures,quiz,avatar, the
+user goes through onboarding again)
+
+Validation
+4.1. When the user presses “Button: Change login method” he redirects to to page:​
+Form Elements
+•
+
+Headline: Change login method
+
+•
+
+Button: Back (previous page)
+
+•
+Text: Change login method​
+You can sign in using your email instead of the previously linked social network account.
+Please make sure that the specified address is entered correctly.​
+example@email.com​
+​
+•
+Button: Set password ​
+​
+Validation
+
+4.1.1. When the user presses “Button: Set password” he redirects to to page:​
+​
+Form Elements
+•
+
+Headline: Change login method
+
+•
+
+Button: Back (previous page)
+
+•
+Text: Set Password​
+This will be your login password. Please keep it in a safe place.​
+​
+•
+Field: Password (placeholder “Enter new password” + visibility toggle)
+•
+
+Field: Confirm password (placeholder “Confirm new password” + visibility toggle)
+
+•
+Button: Set password ​
+​
+Validation​
+4.1.1.1. Password requirements: The password must be 8–20 characters long and include a
+combination of letters, numbers, and symbols (at least two of the three).
+Error message: “Your password must be 8–20 characters long and include a combination of
+letters, numbers, and symbols (at least two of the three).”
+4.1.1.2. Error message displays logic for password requirements: The error message appears
+after the user finishes typing into the “Confirm password” field and shifts focus to the “Update
+Password” field, if the entered password does not meet the required criteria.​
+​
+4.1.1.3. After clicking “Set password ” modal window appears: ​
+Text: Login method changed​
+Button: Return to settings​
+​
+
+4.2 When the user presses “Button: Email” the modal window appears: ​
+Text: Your email​
+[current email]​
+Button: Change
+Validation
+​
+4.2.1 When the user presses “Button: Change” he redirects to page:​
+Form Elements
+•
+
+Headline: Change email
+
+•
+
+Button: Back (previous page)
+
+•
+Field: Email (placeholder “Enter your email”​
+text below: After changing your email, you will only be able to log in with the new address. ​
+
+​
+•
+
+Button: Get verification code
+
+Validation
+1. When the user presses the button “Get verification code” and the field “Email” is not filled,
+highlight the field borders in red. And display a warning in red "Please fill in the field"
+2. Email requirements: email name contains the @ sign and the domain contains "." Error message
+: “Please enter a valid email address”
+Process​
+After clicking the button “Get verification code”, the user is sent an email with a code. Code the
+code must consist of 5 numbers.​
+Text: ​
+“Check your email​
+A password reset request has been sent to your email. Check your email and enter the code from the
+email.​
+If you haven't received the letter, try sending the application again or log in in another way”
+And user redirects to the page:
+Form Elements
+•
+
+Button Back (previous page)
+
+•
+
+Headline: “Change email”
+
+•
+Text: ​
+“Check your email​
+A password reset request has been sent to your email. Check your email and enter the code from the
+email.​
+If you haven't received the letter, try sending the application again or log in in another way”
+•
+
+Field for code
+
+•
+
+Button: Verify code
+
+•
+Button: “Need a new code? Resend email”​
+​
+Validation:​
+​
+4.2.2.1. If the user has not entered 5 numbers, then the red text "Please enter the verification code."
+appears under the code entry field.
+4.2.2.2. If the code user entered was incorrect, a red text appears under the code entry field: "The code
+you entered is incorrect. Please try again."
+4.2.2.3. If the code has expired (24 hours have passed since the code was sent), then the red text "This
+code has expired. Please request a new one." appears under the code entry field.
+
+Process​
+When the user clicks on the Button: “Need a new code? Resend email” he sees a notification at the
+bottom that says "A new verification code has been sent to your email." The button becomes inactive
+and a countdown appears near, starting from 30 seconds.​
+​
+4.2.2.4. After clicking on the verify code button, the user returns to the page and a notification pops
+up: Email successfully changed
+​
+4.3. When the user presses “Button: Password” he redirects to to page:​
+Form Elements
+Form Elements
+•
+
+Headline: “Change Password”
+
+•
+
+Text: “Enter your current password”
+
+•
+
+Field: “Password” (+ visibility toggle)
+
+•
+
+Button: “Forgot password”
+
+•
+
+Button: “Next”
+
+Validation
+4.3.1.If the passwords do not match, display the error message: “Passwords do not match. Please
+enter the right password.”
+4.3.2.After clicking “Button: Next” he redirects to to page:​
+Form Elements
+•
+
+Headline: “Change Password”
+
+•
+
+Text: “Enter new password”
+
+•
+
+Field: “Password” (with visibility toggle)
+
+•
+
+Field: “Confirm Password” (with visibility toggle)
+
+•
+
+Button: “Ready”
+
+Validation
+4.3.2.1.If the passwords do not match, display the error message: “Passwords do not match. Please
+enter the same password in both fields.”​
+
+4.3.2.2.Password requirements: The password must be 8–20 characters long and include a
+combination of letters, numbers, and symbols (at least two of the three).
+
+Error message: “Your password must be 8–20 characters long and include a combination of
+letters, numbers, and symbols (at least two of the three).”
+4.3.2.3.Error message displays logic for password requirements: The error message appears after the
+user finishes typing into the “Confirm password” field and shifts focus to the “Update Password”
+field, if the entered password does not meet the required criteria.​
+
+4.3.2.4.Users cannot proceed unless both passwords match and meet the criteria.
+4.3.2.5.After clicking on the Ready button, the user returns to the page and a notification pops up:
+password change successfully
+​
+4.4. When the user presses “Button: Birthday” he redirects to to page:​
+​
+Form Elements
+•
+
+Headline: Date of birth
+
+•
+​
+•
+
+Button: Back (previous page)​
+
+•
+
+Button: Done​
+
+Field: Date of birth (placeholder with + Calendar button)
+
+5.​ When the user presses “Button: Delete account” he redirects to page:​
+Form Elements
+•
+
+Headline: Delete account
+
+•
+
+Button: Back (previous page)
+
+•
+Text: We’re sorry to see you go!​
+​
+Terms for deleting account
+When you delete your Portal account, all personal data, service history, and Credits
+you own will be permanently deleted and cannot be restored. Once deleted, your
+account cannot be recovered.
+Please note that deleting your Portal
+account does not automatically cancel any
+active subscriptions. You must cancel your
+subscription separately before deleting your
+
+account.
+•
+
+Check-box: I agree with the terms above
+
+•
+
+Button: Delete account
+
+Validation
+The delete account button is not active unless the checkbox is filled in. When clicked, the
+user's account is deleted and all of their posts in the feed become unavailable.​
+
+6.​ When the user clicks toggle switch: “Use my avatar as profile icon” the user's avatar is used
+as a profile icon. If the toggle switch is not enabled, the user's initials are displayed on the
+icon.
+
+3.4. My Avatar
+1. When the user presses “Button: My avatar” he redirects to page Create avatar. This page can have
+two states:
+1.1 With an existing avatar: the user created an avatar during registration.​
+
+The user sees their avatar and the “Change Avatar” button, which takes them to the “Create Avatar”
+screen when clicked.
+1.2 The “Create avatar” screen opens immediately.
+
+3.5. Device Location​
+1.If the user switches the toggle “Device Location” to the off state, then he sees a notification: ​
+​
+Text: “Location access is turned off in your phone settings. To enable location-based suggestions,
+please allow access in Settings > Privacy > Location Services > Portal.” ​
+​
+OK button (when pressed, the notification closes).
+2. If the user switches the toggle “Device Location” to the on state, then he shares his geolocation.
+3. The logic behind the weather widget:​
+​
+The weather widget is integrated into the app to support the AI assistant, which uses current weather
+data and user wardrobe information to provide personalized clothing recommendations (e.g., what to
+wear based on temperature, precipitation, etc.).​
+​
+The widget is displayed on the app's home page.
+It shows weather data exclusively for the current day (today), adapted to the user's location.
+●​ When the app is launched, the user's geolocation is checked (latitude and longitude).
+●​ If the location is unique and within the current day (starting from 00:00 UTC) there have been
+no requests from users in this location, a query is made to a third-party weather API (e.g.,
+OpenWeatherMap or WeatherKit).
+●​ The obtained data is recorded on the backend and stored there for the period: current day +
+3-5 days ahead.
+●​ If a user from the same location (not unique) opens the app, the app sends a request directly to
+the app's backend via the endpoint /weather?lat=...&lon=..., using already stored data, without
+additional queries to the external API.
+●​ When the user interacts with the chat with the AI (assistant), an internal query is made to the
+backend using previously obtained weather data (without a new query to the external weather
+API if the location hasn't changed).
+●​ After the query, the weather icon on the widget is updated with new data.
+
+​
+
+3.6. Log out
+When the user clicks the Log out button, they see a notification window:
+Text: Do you really want to log out of your account?
+Button: OK (the user exits the app and is redirected to the first page)
+Button: Cancel (window closes)​
+
+​
+3.7. Subscriptions​
+​
+1. When the user presses “Button: Free” he redirects to page: ​
+Form Elements
+•
+​
+•
+
+Button Back (return to previous page) ​
+
+•
+
+Text:
+
+Headline: “Want more than 15 outfit suggestions a month?”
+
+“With the Pro Plan, there are no limits. ​
+​
+Free Plan: 15 AI outfit suggestions per month
+Pro Plan:
+​ Unlimited AI outfits generations every day
+​ Longer, more tailored responses that understand your style
+$8.99/month or $99.99/year
+
+Free Plan:
+​ 15 AI outfit suggestions per month
+X ​ Unlimited outfits every day
+X Longer, more tailored responses that understand your style
+
+Button: Upgrade to pro plan ​
+Button: Stay for free (returns to previous page)
+2. When the user presses “Button: Pro” he redirects to page: ​
+​
+Form Elements
+•
+​
+•
+
+Button: Back (return to previous page) ​
+
+•
+
+Text:
+
+Headline: “You’re on Pro Plan” (with date of renews, f.e. Renews on Aug 12, 2026)
+
+​ Unlimited outfits every day
+​ Longer, more tailored responses that understand your style
+•
+
+Button: Manage (redirects to phone settings with subscripts)​
+
+When the user clicks the Manage button, he sees a modal window: ​
+Form Elements
+•
+
+Headline: Cancel subscription?
+
+•
+
+Button: Yes (now the user can't generate more than 15 outfits)
+
+•
+
+Button: No
+
+​
+3.8. Temperature unit
+When user clicks on Temperature unit button he redirects to page:​
+​
+Form Elements
+
+•
+
+Button: Back (returns to previous page)
+
+•
+
+Headline: Temperature unit
+
+•
+
+Toggle switcher: Degree Celsius (°C)
+
+•
+
+Toggle switcher: Degree Fahrenheit (℉)
+
+Process ​
+​
+The user can only select one switcher to be on.
+The selection will be displayed on the main screen in place of the temperature here.
+
+​
+3.9. Outfit generations
+
+When user clicks on Outfit generations button he redirects to page:​
+
+Form Elements
+•
+
+Button: Back (returns to previous page)
+
+•
+
+Headline: Outfit generation
+
+•
+Fill scale ( with number of x/y generations available ; where is x-number of outfit
+generations for month, y - 15 for Free plan)
+
+•
+
+Date of renews, f.e. Renews on Aug 12, 2026
+
+•
+
+Button: Upgrade plan
+
+•
+
+Button: Back (returns to previous page)
+
+•
+
+Headline: Outfit generation
+
+•
+
+Fill scale ( Unlimited, infinity generations available for Pro plan)
+
+•
+
+Date of renews, f.e. Renews on Aug 12, 2026
+
+•
+
+Button: Manage subscription
+
+When the user clicks the Manage button, he sees a modal window: ​
+Form Elements
+•
+
+Headline: Cancel subscription?
+
+•
+
+Button: Yes (now the user can't generate more than 15 outfits)
+
+•
+
+Button: No
+
+3.10. My sizes
+When the user clicks the Manage button, he redirects to the page (Create account: Third Step)​
+​
+Validation:
+1.​ Differences from the original page:​
+- The data is pre-filled with the user's previous choice on each screen of this stage.​
+- If user skipped measures before, all fields are empty​
+- Instead of the Continue button, there's Advance Settings; instead of Skip, there's Save. (If
+the Save button is pressed, the user returns to the page with the saved data / If the Advance
+Settings is pressed, the user goes to the page of Advance settings where the Submit button is
+replaced by a Save button, the shoe section only has one Apply button. The user can change
+the values, and clicking Save or Apply saves the changes and returns the user to the page. )​
+​
+
+​
+​
+2.The user can select only one toggle switches (if the user selects another, then all units of
+measurement are converted to the corresponding units of measurement) and the user see
+modal window:​
+Form Elements
+•
+Text: Sizes and measurements will be shown in a different system. We’ll convert your
+saved values.​
+•
+Button Cancel (modal window closes)​
+•
+Button Switch (the size data is converted into the selected measurement system)
+
+3.11. AI Stylist
+When user clicks the AI Stylist Button he redirects to the page:
+Form Elements
+
+•
+
+Headline: AI Stylist
+
+•
+
+Button: Back
+
+•
+The name of the question from the quiz (with bubble where the user's previous choice
+is indicated) and the button for going to the page with this question, when going to the question
+instead of the buttons next and back - the Save button (when saving, the user returns to the previous
+page and the previous choice is indicated under the title of the quiz question in the bubble)
+
+​
+3.12. Help and Feedback
+When the user clicks the notification button “Help & Feedback” he sees ​
+​
+Form Elements of “Help & Feedback” window​
+​
+
+•
+​
+•
+
+Button: Back (returns to previous page)​
+Headline: Help & Feedback
+
+•
+Field “Describe your problem or idea here” (placeholder: I have an idea…) limit 1000
+characters
+•
+Button Send​
+​
+Validation: ​
+​
+1. If no comment is entered, the "Send" button is inactive; the "Add a comment" hint is below the
+field to be filled in.​
+2. If the character limit in a field is exceeded, display a red notification under the field:“The limit has
+been reached”​
+3. When user clicks Send button he sees page:​
+​
+Form Elements​
+•
+Button: Back (returns to previous page)​
+​
+•
+Headline: Help & Feedback
+•
+
+Text: “Thank you!Your feedback has been successfully submitted and is very valuable to us.”
+
+•
+​
+
+Button OK (returns to the Profile page)​
+
+4.Closet
+Onboarding pop-up window for the first visit -> main screen -> adding item /adding item to collection
+/ delete item​
+​
+If the user visit this page for the first time he will see pop-ap window:
+​
+​
+Form Elements of onboarding window
+•
+Button: Close (close window)​
+​
+•
+Text ​
+​
+“Upload your wardrobe”​
+Add items to build your virtual closet and start styling.​
+​
+[Picture]
+Special button​
+You can add an item at any time by clicking on the "+" button in the top right corner.​
+​
+•
+Button: Next (goes to section page)​
+​
+•
+Button: Skip (close window)
+​
+​
+Form Elements for main screen of section
+
+•
+
+NavBar
+-​
+-​
+-​
+
+•
+
+Headline: My Closet
+Button Choose
+Button Add
+Second NavBar
+
+-​
+-​
+-​
+
+Fit Checks
+Clothing (when entering the section, the user will always be on this tab)
+Collections
+
+•
+
+Search line with placeholder “Search”
+
+•
+
+Tab (when select a tab, all items are filtered by the selected category) ​
+All ( shows the last added item)​
+
+-
+
+-
+
+Tops​
+Bottoms​
+Dresses ​
+Outerwear​
+Shoes​
+Accessories
+
+•
+Pictures of items​
+​
+•
+Tab bar​
+​
+​
+Validation:​
+
+1.If the user chose here Style preference = Men’s the category Dresses should be removed.
+2.When a user first enters a section, there are no added items and in their place are displayed for each
+category (Tops, Bottoms, Dresses, etc.) a light gray category icon with button Add new item:
+●​
+●​
+●​
+●​
+●​
+●​
+
+T-shirt for Tops and All
+Pants for Bottoms
+Dress silhouette for Dresses
+Shoe for Shoes
+Handbag for Accessories
+Jacket for Outerwear
+
+​
+​
+​
+Process​
+​
+
+1. When the user presses the select button, a select button appears for each image, and at the bottom
+there is a panel:
+- button: "Select collection"
+- text: number of selected items
+- reset button (cross icon)​
+​
+- button: Add to collection​
+​
+- button: Delete​
+​
+Validation:​
+​
+1.1. The add to collection and delete buttons appear only after clicking on one of the images with an
+item
+1.2. When the user clicks on "Add to collection" he sees the next page:​
+​
+
+Form Elements for adding to collection page
+
+•
+
+Headline: Add to collection
+
+•
+
+List of user’s collections + button Plus (when pressed, it goes
+
+•
+
+Button: Create New ​
+
+to
+
+)​
+
+Process​
+​
+When the user selects a category (clicking button Plus), this item will appear in the collection section
+and in the closet section. The user can select several collections​
+​
+1.3. When the user clicks on “Delete" he sees modal window:​
+​
+
+Form Elements for deleting items
+
+•
+
+Headline: Are you sure to delete [number of selected ] item(s)?
+
+•
+
+Text: These items will be removed and can not be undone
+
+•
+Button: Delete (delete items from app) If removed from the all collection, it is permanently
+removed. If removed from another collection, it remains in the all collection.
+•
+
+Button: Cancel (close window)
+
+​
+​
+2. When clicking on the picture, the user is redirected to the item page​
+
+4.1. Item page
+Form Elements​
+​
+•
+NavBar
+-​
+-​
+-​
+•
+
+Button Back
+Headline: Item
+Button Delete (When clicked, selected photo would be deleted)
+Picture: with button “Outfit Suggestion”
+
+•
+Field: Name (the field contains a placeholder with the number of characters entered/50. If the
+limit is exceeded, the field is highlighted in red and the text appears below the field: The limit has
+been reached. User input is restricted)
+•
+
+Button: Add to the Collection
+
+•
+
+Field: Category
+
+•
+
+Field: Color
+
+•
+
+Field: Fabric
+
+•
+
+Field: Season
+
+•
+
+Field: Fit
+
+•
+Button: Save (This item(s) will be saved in the All tab in the Clothing section and in the
+selected collection)
+•
+
+Button Post
+
+Validation
+
+1. When the user clicks on the Category he sees the list of categories from this page (he can only
+choose one category). The page can be closed by clicking the Close button. The category is
+determined automatically by AI, the user can change the value.
+2. When the user clicks on the Color field, a page with color selection (icon with color and name)
+appears. The color is determined automatically by AI, the user can change the value
+​
+
+3. When the user clicks on the Fabric field, a page with material selection (icon with material and
+name) appears. When clicking on the "Other material" button, the user can select several options. The
+page can be closed by clicking the Close button​
+
+4. When the user clicks on the Season field, he sees the page with four options: Spring, Summer,
+Autumn, Winter. Users can choose several options. The page can be closed by clicking the Close
+button
+5.When the user clicks on the Fit field, he sees options depending on the category he chose in the
+previous step. Options for each category:​
+​
+​
+
+Tops​
+​
+Slim Fit
+Regular Fit
+Relaxed Fit
+Oversized
+Cropped Fit
+Fitted​
+​
+Bottoms​
+​
+Slim Fit
+Regular Fit
+Relaxed Fit
+High-Waisted
+Wide-Leg
+Straight Fit ⁠tight/skinny​
+⁠ ⁠​
+Flare⁠ ​
+​
+⁠Mid-rise
+Low-rise
+⁠High-rise
+Cropped
+Shorts ⁠
+Mini⁠ ⁠
+Midi⁠ ⁠
+Maxi
+Dresses​
+
+Slim Fit
+
+Regular Fit
+Relaxed Fit
+A-Line
+Wrap Fit
+Bodycon
+⁠Maxi​
+⁠​
+Mini​
+⁠​
+MIDI​
+​
+Strapless
+Off-shoulder
+Halter
+Outerwear​
+​
+Slim Fit
+Regular Fit
+Relaxed Fit
+Oversized
+Boxy Fit
+Cropped Fit
+Tailored
+Shoes​
+​
+Flat
+Heeled
+Chunky
+Low-Cut
+High-Cut
+Open-Toe
+
+Closed-Toe
+Pointed Toe
+Round Toe
+Square Toe
+Accessories​
+​
+Compact
+Medium Size
+Oversized
+Hands-Free
+Hand-Carried
+Structured
+6. When user clicks button “Add to collections” a list of existing collections are shown (logic here)​
+When selecting a collection, these item will be displayed in the selected collection
+
+Item adding by button “Add item” from tap bar/from Section Clothing​
+​
+After clicking the Add button the camera on the user's smartphone opens -> Taking a photo ->
+Scanning screen -> Adding page ​
+​
+
+Form Elements of scanning screen​
+
+If the user has made/uploaded a picture and there are several items on it, then the AI ​divides them into
+several pictures and the user can choose which items he wants to add to Closet​
+​
+•
+NavBar
+-​ Button Back
+•
+
+Text: Select items to add + number of generated items
+
+•
+Button Add items​
+​
+Validation​
+Button Add items becomes active if the user has selected at least one item. After clicking button user
+
+redirects to next page:​
+
+Form Elements for adding item page​
+​
+•
+
+NavBar
+-​
+-​
+
+Button Back
+item ordinal number/number of items to add
+
+•
+
+Picture
+
+•
+
+Field Name
+
+•
+
+Field Add to the Collection
+
+•
+
+Field: Name (Limit = 500 characters)
+
+•
+
+Field: Category
+
+•
+
+Field: Color
+
+•
+
+Field: Fabric
+
+•
+
+Field: Season
+
+•
+
+Field: Fit
+
+•
+
+Button: Next
+
+•
+
+Button: Previous
+
+•
+
+Button: Save
+
+​
+​
+Process​
+​
+1. If the item is the first, then the next button is shown, if the last, then Previous and Save, otherwise
+Next and Previous​
+2. When the user goes to edit an item, he can add it to the collection if it has not been added yet. The
+item card looks the same + button Add to the Collection​
+3. The Outfit Suggestion button is only available if the item has already been saved (i.e. when the user
+is editing the item)​
+4. Validation for fields is here
+
+If the AI cannot recognize an item when photographing/adding an item, a pop-up window appears​
+Form Elements​
+​
+•
+Button Back
+•
+
+Text: Sorry, item could not be recognized. Please try again.
+
+5.Fit check
+Form Elements the main screen ​
+​
+•
+Headline: My closet
+•
+
+Button Add fit check
+
+•
+
+NavBar
+-​
+-​
+-​
+
+•
+
+Fit Checks
+Closing
+Collections
+Calendar
+
+•
+Tab bar​
+​
+​
+Process​
+​
+1.The calendar contains dates when Fit checks were created and the user can click on this date. He
+redirects to next page:​
+
+​
+5.1 Form Elements with fit checks on that day​
+
+​
+​
+•
+
+Headline: Date of creation
+
+•
+
+Button Back
+
+•
+
+Button Select
+
+•
+Fit checks (photos) which were created on this day​
+​
+2. When the user clicks on the button Select the photo shows the possibility to choose. When user
+clicks on the selected fit check, this screen looks like this:
+5.2 Form Elements Button Select
+​
+​
+•
+Headline: number of selected Fit checks (format: n selected, where n - number of selected Fit
+checks)
+•
+
+Button Close (reset selection)
+
+•
+Pictures with scroll function (show all pictures that the user has added+for each photo add the
+option to choose)
+​
+​
+- Button Delete​
+- Button Add to Collection​
+​
+Process​
+​
+2.1.When user clicks button “Add to collections” a list of existing collections are shown (logic here)​
+When selecting a collection, these fit checks will be displayed in the selected collection​
+2.2 When user clicks button “Delete” he sees modal window:​
+​
+Form Elements delete​
+​
+•
+Headline: Are you sure to delete [number of selected fit checks]?
+•
+Text: These fit checks will be removed and can not be undone. (This fit check will be
+removed and can not be undone - for single selection)
+•
+
+Button Cancel
+
+•
+Button Delete​
+​
+When a user clicks Delete all selected photos are deleted (From all collections, collection All and
+from this section)
+When user clicks Cancel modal window escapes​
+​
+​
+3. Users can click on the Fit check and see the page:​
+
+​
+5.3. Form Elements for saved fit check
+​
+•
+
+Headline: Fit check
+
+•
+
+Button Back (return to the day in the calendar from which the fit check was clicked)
+
+•
+
+Button Delete (see item 2.2)
+
+•
+
+Button Ask Stylist (the hint is generated by AI” + Icon [P] Tip)
+
+•
+
+Button Post
+
+Process​
+​
+4. When the user clicks the “Ask stylist” redirects to page​
+​
+
+5.4 Fit checks Calendar
+Form Elements
+•
+
+Headline: Month, Year
+
+•
+
+Days of the week
+
+•
+
+Calendar (days + opportunity to scroll)​
+
+Process
+In the Day window show Fit checks created on this day. Show only one photo (photo is displayed
+according to the time it was added (the most recent one)), show the date in the picture if no fit checks
+were created on this day - show only the date.
+Validation
+1.Highlight the current date without a photo in bold
+2. If there is a photo for that day, if it was added today, the photo will have a highlighted border
+3. If the user's phone's location is set to the United States, the American calendar format is
+used: year, month, week starts on Sunday. Otherwise, the European format is used: month, year,
+week starts on Monday.​
+​
+
+5.5 Fit checks creation in fit check section / by button “Add fit check” from tap bar
+After clicking the Add button the camera on the user's smartphone opens -> Taking a photo ->
+Onboarding for first time-> Page for adding fit check -> Save fit check/ Post / Ask Stylist (proposing
+save)​
+
+​
+5.6 Form Element for adding new fit check​
+​
+
+•
+
+NavBar
+-​
+-​
+-​
+-​
+
+Button Back (When the user clicks on the Back button, he can use a smartphone camera (past
+page).
+Button Close (returns to the screen from which the user submitted/opened the fit check)
+Headline: New Fit check
+Button: Save​
+​
+Process​
+1.When the user clicks on the “Save” button, this Fit checks appears at this page , then a
+window appears:​
+
+5.7 Form Element for new fit check​
+​
+
+•
+
+NavBar
+-​
+-​
+
+•
+
+Button Back (returns to the screen from which the user submitted/opened the fit check).
+Headline: New Fit check
+
+AI Stylist block​
+​
+- Headline: [P]Tip​
+Text: “Consider adding a structured blazer for more shape.” ​
+- Button: Ask Stylist​
+- Button: Post​
+- Button: Done (returns to the screen from which the user submitted/opened the fit check)​
+Process​
+​
+1. When the user clicks the “Ask stylist” button a modal window appears:​
+
+5.8. Form Elements for saving fit check after clicking Ask Stylist​
+​
+
+•
+
+Headline: Do you want to save this Fit check?
+
+•
+
+Button No (Redirects to page, Fit check wouldn’t save in section)
+
+•
+Button Yes (Redirects to page, Fit check would save in section)​
+​
+3. When the user presses the button “Add Fit check” for the first time appears onboarding pop-up:​
+​
+
+​
+5.9. Form Elements of onboarding pop-up for first time
+​
+•
+
+Button: Close (close the window)
+
+​
+•
+
+Text: “Post your first Fit Check​
+Build your outfit calendar and share your daily fits —for you or your followers.”
+
+•
+
+Button: Next
+
+•
+
+Button: Skip (close the window)
+
+6. Collections
+Entrance to the section -> open collection -> delete collection / edit collection / add collection ->
+outfits -> posting page from tap bar by button new post
+
+Form Elements of section​
+​
+
+•
+
+NavBar
+-​
+-​
+-​
+
+•
+
+Button Back (returns to previous page)
+Headline: My closet
+Button Add
+NavBar
+
+-​
+-​
+-​
+
+Fit Checks
+Clothing
+Collections
+
+•
+Collections ( frame with maximum 4 displayed pictures) + name of collection ( if a collection
+was created before) /collection All by default (where are all saved fit checks/outfits/items/pictures
+from feed stored)
+•
+Tab bar​
+​
+Validation:​
+​
+1. When user first time visits page he sees only collection All​
+
+​
+2. Saved images in collections are displayed as follows: from top left to right, the most recently added
+images are displayed.
+Process​
+​
+1. When the user clicks on the collection name he goes to the page:​
+
+​
+Form Elements for for the selected collection​
+
+•
+
+Button: Back (returns to previous page)
+
+•
+​
+•
+
+Action bar (not available for the collection All)​
+Headline: Collection
+
+•
+Name of collection (the field contains a placeholder with the number of characters entered/50.
+If the limit is exceeded, the field is highlighted in red and the text appears below the field: The limit
+has been reached. User input is restricted)
+•
+
+Text: n-saves, where n = Number of pictures added to the collection
+
+•
+
+Block of Feed
+
+•
+
+Block of Fit checks
+
+•
+
+Block of Outfits
+
+•
+
+Block of Closing items
+
+Validation​
+​
+If only one image is added to the corresponding block, only that block is displayed.
+Example:​
+​
+
+​
+
+Process​
+​
+1. When the user clicks on the action bar, he sees three buttons in modal window: ​
+- Delete​
+- Edit​
+- Cancel​
+​
+2. When entering a certain block (Feed/Fit checks/Outfits/Clothing items) the user sees a page:​
+​
+Form elements​
+
+​
+•
+
+Button: Back (returns to previous page)
+
+•
+
+Headline: Collection
+
+•
+
+Name of collection
+
+•
+
+Pictures with function to scroll
+
+•
+Button Select (When clicks, user sees two buttons in modal window: ​
+​
+- Delete When clicks, user sees two buttons in modal window: ​
+​
+​
+•
+Headline: Are you sure to delete [outfit(s)/fit check(s)/post(s)/item(s)]? ​
+You won’t be able to restore it later.
+•
+Button Delete (delete chosen pictures) (If deleted from the all collection, it is permanently
+removed. If removed from another collection, it remains in the all collection.)​
+​
+•
+Button Cancel (returns to previous page) )​
+​
+- Cancel (deny selection)​
+
+2.1.If fit check block was selected, then clicking on the image opens form​
+​
+2.2.If item block was selected, then clicking on the image opens form​
+​
+2.3. If outfit block was selected, then clicking on the image opens form:​
+​
+
+Form Elements of Outfit page​
+
+​
+•
+
+Button: Back (returns to previous page)
+
+•
+
+Headline: Outfit
+
+•
+
+Button Delete
+
+•
+
+Button Post​
+
+When user clicks on Delete button, modal window opens: ​
+​
+Form Elements of modal window Delete Outfit​
+
+​
+•
+
+Headline: Are you sure to delete this outfit?
+
+•
+•
+
+Button Delete ​
+Button Cancel (returns to previous page)
+
+​
+2.4. If feed block was selected, then clicking on the image opens form:​
+​
+Form Elements of Post from Feed​
+​
+•
+Button: Back (returns to previous page)
+•
+
+Headline: Post from Feed
+
+•
+
+The post that was displayed in the feed
+
+​
+
+​
+Form Elements of modal window Delete Collection​
+
+​
+​
+•
+
+Headline: Are you sure to delete this collection?
+
+•
+
+Text: If you delete this collection, the photos included in it will be deleted.
+
+•
+​
+•
+
+Button Delete (delete collection)​
+Button Cancel (returns to previous page)
+
+Form Elements for Editing collection
+​
+•
+​
+•
+
+Button: Cross (returns to previous page)
+Headline: Edit Collection
+
+•
+Field: Name (Limit - 50 Symbols)​
+​
+•
+Button Delete (under text: “If you delete this collection, the photos included in it will be
+deleted.”
+•
+​
+
+Button: Done (Save changes)
+
+Validation​
+1. When the user writes more than 50 characters - the field “Collection Name” is highlighted in red
+text and the text "The limit has been reached" appears below​
+2. If the user enters any value in the Name field and then clicks the Cross, a modal window appears:
+•
+​
+•
+
+Headline: Do you want to save these changes?
+Button: Yes (saved changes)
+
+•
+Field: No (returns to previous page)​
+3.If the Field Name is not filled, then highlight the field borders in red when the user presses Button
+“Done”. Text under empty field: "Enter value"
+4. When a user selects an outfit /fit check/post /item to add to a collection and is given a choice of
+which collection to add to, the collection icon is the first one added to the collection.​
+​
+​
+Form Elements for Adding new Collection​
+​
+
+•
+Headline: Create new
+•
+Button Back (returns to previous page)​
+•
+Button Next​
+•
+Field: Collection Name (Limit - 50 Symbols)​
+Validation​
+1. When the user writes more than 50 characters - the field “Collection Name” is highlighted in red
+text and the text "Character limit 50" appears below​
+2. If the user has not entered any value in the field “Collection Name” , “Next” button becomes
+inactive and the text "This field is required" appears under the field. The field and text are highlighted
+in red.
+Process​
+​
+1. When the user clicks on the Next button, he is taken to the page for “All” Collection (Headline:
+Select to collection) with Button Done (Save new collection. New collection will be posted here. User
+can save an empty collection without any added images.)​
+​
+When entering a certain block (Feed/Fit checks/Outfits/Clothing items) the user sees a page:​
+​
+Form elements​
+​
+•
+Button: Back (returns to previous page)
+•
+
+Pictures with function to scroll + function to select
+
+•
+Button Done (These selected pictures will be displayed in this collection in the corresponding
+block. User returns to previous page)
+
+2. The limit on the number of images added to a collection is 999. If the limit is exceeded, a
+notification will appear: "The additional limit has been exceeded" and an "OK" button will appear
+(when clicked, the notification disappears).
+
+Posting page from tap bar by button new post
+When a user clicks the New Post button, he is redirected to the Collections section. He selects the
+block from which he wants to add an image for his post. Then he sees form for selection:​
+Form Elements for selection pictures for new post​
+​
+•
+Button: Back (returns to previous page)
+•
+Button: Done (all selected images will appear in the posting page)
+•
+Headline: Select image (when user selected text: - n selected, where n = number of selected
+images)​
+•
+Picture (Fit check/ Item/ Outfit)​
+​
+For the first time he will see a notification: “Add up to 5 photos to your post.Tell your story through
+the details!” with button Ok (clicking - notification closes).
+
+​
+7. Posting page
+Form Elements​
+​
+•
+Button: Back (returns to previous page)​
+​
+•
+Button: Cross
+•
+
+Headline: Add New Post
+
+•
+Picture ( Fit check/ Item/ Outfit) + Button Add New Photo (with the ability to add up to 5
+pictures from the same section/ if user has reached this page via this flow, then do not display this
+button/if there was a flow created by a button, then when pressed it returns to the camera)
+•
+Field for caption (limit- 1000 symbols, after posting in the feed the first 135 characters are
+displayed, if exceeded: when clicked the entire text is displayed)
+•
+Button Survey (when pressed and only one photo was added, notification is shown: “Add
+more photos to include survey”)
+•
+Button Post​
+​
+Process​
+
+​
+1. When posting images, when the Survey button was pressed - images appear in the feed and a voting
+button under them. The names of the buttons are according to the number of images. For example,
+there were three images, the names of the buttons = 1,2,3
+2.When the user has entered more than 1000 characters in field for caption, underline the input field in
+red and indicate the text below: The limit has been reached.
+
+8. Feed
+Form Elements of starting page
+•
+
+Headline: Feed
+
+•
+
+Search field
+
+•
+
+Icon of notifications
+
+•
+​
+•
+
+Icon of profile​
+
+•
+
+User name
+
+Profile photo
+
+•
+Action menu:​
+​
+Button: Report​
+Button: Share
+•
+Picture (with comments below- the first 135 characters are displayed, if exceeded: when
+clicked the entire text is displayed )
+•
+
+Date of loading
+
+•
+
+Button Like
+
+•
+
+Button Add to favorites
+
+•
+
+Button Comment​
+
+Process​
+1 .When pressed Button:Report , it shows screen with the ability to reset down​
+​
+Form Elements for Report page​
+​
+•
+Headline: Report
+•
+Text: “Think this user is breaking the rules? Let us know — we’ll review it and take action if
+needed. Your report is confidential.”
+
+•
+Buttons:​
+- Contains advertising or promotional content​
+- Duplicate content or spam​
+- Violence, hate speech, or sexual content​
+- Intellectual property violation​
+- Other​
+​
+1.1.When pressed all buttons except “Other” the user sees screen with the ability to reset down​
+​
+
+Form Elements​
+​
+•
+Icon Approved
+•
+
+Headline: “Thank you for your feedback”
+
+•
+
+Text: “We use your reports to show you less unwanted content and keep our community safe.”
+
+•
+
+Text with button: “What else you can do” + button “ Block [User_Name]” (logic from 1 item)
+
+​
+1.2.When pressed button “Other” the user sees screen with the ability to reset down​
+Form Elements​
+​
+•
+Headline: Report
+•
+
+Screen for Commenting ( limit 1000 symbols)
+
+•
+
+Button Submit
+
+When pressed button "Submit" the user sees screen from item 1.1
+If no comment has been entered, the "Submit" button is inactive; the "Add a comment" notification
+under the field is highlighted in red.
+1.3. If the user has already submitted feedback to a post, clicking it again will display a notification:
+"You have already submitted a report to this post" and two buttons: OK and Close. Clicking either
+button will remove the notification.​
+​
+2. When pressed Button Add to favorites , it shows pop-up window with:​
+- Headline : Add to collection​
+- Button Close (close window)​
+- All collections which was created by user​
+- Button: Create new collection
+3. When pressed Button Comment comment form appears:​
+​
+Validation​
+3.1. Comments are displayed by the date they were posted.​
+
+​
+3.2. The posting date is shown in the following format:
+• If less than an hour ago = number of minutes ago
+• If less than 24 hours ago = number of hours ago
+• If between 24 and 48 hours ago = "yesterday"
+• If more than 48 hours ago = full date (Format: Month day, year)
+3.3. Ability to delete your own comment. Delete button appears. When clicked, a modal window
+appears:​
+- Headline : Delete comment?​
+- Button “Yes” (deleting a comment)​
+- Button “No” (closing modal window)​
+- Button “Close” (closing modal window)​
+​
+3.4. Сharacter limit for comments = 1000 symbols​
+If the text does not fit into 5 lines, user can clicks and the rest of the text will appear after typing on
+the box. If the limit is exceeded, the field is highlighted in red and the text appears below the field:
+The limit has been reached. User input is restricted.
+3.5. If there were no comments under the post, a placeholder will appear: “No comments yet. Start the
+conversation.”​
+​
+4. The feed can be scrolled
+5. When pressed Button Share creates link that directs to the App Store/Google Play Store for app
+installation if it’s not installed, and for existing users, directs them to the specific post (sending occurs
+through the standard iOS/Android system window)​
+​
+6. When a user clicks on a picture number to vote, after clicking it shows the percentage of other users
+who voted for each image. The user can click on the picture number again and the votes will be
+recounted
+If the percentage value after the decimal point is 4 or less, then do not round up. The whole value is
+displayed.
+7. When the user taps on the profile icon, they are redirected to his public profile.
+8. The system generates a feed of posts for the user as follows:
+Posts from all users on the platform (global feed).​
+The user’s post appears first in the feed after uploading
+Posts from other users that the given user is following (personalized subscription feed). These two
+queues of posts are combined into a single feed.
+Additional restrictions:
+The user does not see more than 10 posts per day from any single other user (to prevent spam and
+overload).
+
+Only posts published no later than one week ago are shown (for relevance). Posts are delivered on a
+LIFO (Last In, First Out) basis — the most recent posts are shown first.​
+Limiting the number of followers/followings = 1000
+9. When the user clicks on the search bar, a form opens:
+​
+Form Elements
+•
+
+Button: Back (returns to previous page)
+
+•
+
+Headline: Search
+
+•
+
+Search field (placeholder - Search)
+
+Process:​
+​
+1. When the user clicks the search bar, a Cancel button appears. It clears the entered data. It disappears
+once the user has typed and clicked OK.
+2. The search searches for users by username and displays matches in the name. Matching users
+appear in the list (along with the user icon). Clicking on the username line takes you to the user's
+public page. You can scroll down the list of matches.
+
+9. AI Begin new chat
+Form Elements
+1.​ Onboarding (works only when you first open the chat)​
+
+Has 2 steps: ​
+1.1. Modal window with buttons: Close, Next​
+Text “Meet your [P]ortal stylist​
+Discover outfit suggestions, styling tips, and wardrobe insights — all tailored to you.​
+Natural conversation​
+Ask questions — from “What should I wear?” to “Does this go together?”” + picture​
+When clicking Close - window close, the next modal window wouldn’t be shown.​
+When clicking Next - next modal window is shown:​
+
+​
+
+1.2. Modal window with buttons: Close, Next, Skip​
+Text “Meet your [P]ortal stylist​
+Discover outfit suggestions, styling tips, and wardrobe insights — all tailored to you.​
+Style full outfits​
+Get looks built from your closet or for a special event”” + picture​
+When clicking Close - window close, the next modal window wouldn’t be shown.​
+When clicking Start Styling - next window is shown:
+
+2.​
+•
+
+Headline: History
+
+•
+
+Button: Settings
+
+•
+
+Button: New chat
+
+•
+
+Tab bar​
+
+Validation​
+​
+1.If the user has visited this page and has not had a dialogue with the bot before, then the placeholder
+"It’s quite for now…Tap “New chat” to begin”, if otherwise then:​
+​
+List of chats with name (maximum 50 characters) and creation date + the text of the user's last
+request and when the request was written (for ex: 20 minutes ago). ​
+​
+How the last visit time is formed:​
+if less than an hour = number of minutes ago​
+if less than 24 hours = how many hours ago​
+if less than 48 hours and more than 24 hours = yesterday​
+
+if more than 48 hours = specify the date (Format: Month date, year)​
+The user can go to this chat
+2. Show a maximum of 6 lines of messages from the user. If the message takes up more than 6 lines,
+we allow scrolling the message by tapping the finger and show the scroll line. Characters limit =
+1000. If more - notification “The limit has been reached”
+3. If the following errors occur: no internet, API failure, Timeout - then the "Refresh" button appears
+under the sent message (the button and the text "Couldn’t send. Tap to try again." are colored red).
+When pressed - an attempt to send the message again
+4. When a message is sent and there is no response from the AI, the message "Something went wrong
+- I couldn't generate a response" comes with a "Refresh" button and the text "Try to tap again" (The
+button and text are colored red). When pressed, the AI ​tries again to send a response.
+5. When an AI response is generated or an outfit is formed, dynamic three dots and the text "One
+moment" appear.
+Process​
+​
+When the user clicks on the Settings button, the user sees a page (All of his previous answers to the
+Quiz)​
+​
+Form Elements
+•
+
+Button: Back
+
+•
+
+Headline: AI Stylist
+
+•
+Line with the question category (Casual day outfits/ Colour Palette/ Print & pattern
+style/ Preferred shoes/ Bottom fit/ Outwear Style/ Style boldness/Accessories/ Night-out style/ Style
+exclusions) + bubbles with previous answers (clicking on the arrow returns to the desired Quiz
+question)
+6. The History field shows all the user's latest requests when communicating with AI. The chat name
+is displayed (generated by AI) and below it the date of the last chat message, the display format is see point 1. Maximum display of names - 6 last chats​
+​
+
+7. If the user did not complete the advanced or basic settings during registration and clicking new
+chat a modal appears with the message: "Dimensions. To create a more realistic avatar and to generate
+accurate recommendations and build style, please complete the advanced settings." The modal
+includes button: "Enter dimensions". If he taps "Enter dimensions", he is taken to the advanced
+settings page
+
+8. If the user did not complete the quiz during registration and clicking new chat, a modal appears
+with the message: "​
+Let’s set up your stylist.​
+Before we can chat, let’s define your unique style.​
+Just a few quick questions — and your assistant will tailor every outfit to you." The modal includes
+button: "Start style quiz". If he taps "Start style quiz", he is taken to the quiz page​
+
+9. If the user did not complete the avatar creating during registration and clicking new chat, a modal
+appears with the message: "Your assistant will be able to show you new looks on your avatar.​
+To use all features, generate accurate recommendations, and build your style, please create your
+avatar." The modal includes button: "Create avatar".If he taps "Create avatar"", he is taken to the
+avatar page​
+
+​
+10. All additional modal windows open one by one, after first checking whether the user has filled in
+the required data.
+
+9.1. New chat
+Form Elements​
+​
+•
+Button: Back (returns to previous page)
+•
+
+Headline: (is generated by the bot based on the keywords in the user's request)
+
+•
+
+Button: Start new chat (+)
+
+•
+
+Button: Settings
+
+•
+etc.
+
+Welcome message: “Hi, [User Name]! I am your [P]ortal stylist! I can help you craft looks etc.
+
+•
+Three examples of requests to the bot​
+“What should I wear for dinner at a rooftop in NYC?”​
+“Style this black dress differently for daytime”​
+“What colors go well with my brown coat?”
+•
+
+Button Add
+
+•
+
+Button Send (after clicking the typed message is displayed on the chat screen)
+
+Process​
+​
+When the user clicks on the Settings button, the user sees a page (All of his previous answers to the
+Quiz)​
+​
+Form Elements
+
+•
+
+Button: Back
+
+•
+
+Headline: AI Stylist
+
+•
+Line with the question category (Casual day outfits/ Colour Palette/ Print & pattern
+style/ Preferred shoes/ Bottom fit/ Outwear Style/ Style boldness/Accessories/ Night-out style/ Style
+exclusions) + bubbles with previous answers (clicking on the arrow returns to the desired Quiz
+question)
+
+Adding photo to chat
+Process​
+When the user clicks on the add button, three buttons appear:​
+Gallery​
+Camera​
+Closet​
+​
+1.When the user clicks on the Gallery button, the user is taken to the Smartphone gallery screen.
+Opportunity to select only one photo. After selecting the photo appears on the chat screen​
+​
+2. When the user clicks on the Camera button, he can use a smartphone camera.​
+When photo is taken, the photo appears on the chat screen​
+​
+3. When the user clicks on the Сloset button he redirects to the page (Collection All). Opportunity to
+select only one item.When item is chosen, the item appears on the chat screen​
+
+After adding a photo AI gives the answer.
+
+​
+Outfit suggestion/Ask Stylist
+Process​
+​
+1.1.
+1.2.A new chat opens. A photo is automatically uploaded to the chat, showing the item/fit check for
+which the request was made, plus the user can enter a text description for the question to AI.​
+When a user clicks the Ask stylist/Outfit suggestion button, the image that was on the previous page is
+attached to the dialog box + field for describing your request before being redirected to the chat.​
+
+​
+​
+​
+2. Upon user request, the AI ​produces results:
+2.1. Text response from AI​
+
+2.2.
+
+​
+Outfit offer in the form of a collage with products​
+The result of the answer will be a collage that has buttons: like, dislike, try on my avatar and add to
+favorites.​
+Like and dislike buttons help the AI navigate the user's preferences
+When pressed Button Add to favorites , it shows pop-up window with:​
+- Headline : Add to collection​
+- Button Close (close window)​
+- All collections which was created by user​
+- Button: Create new collection ​
+​
+When the Try on my Avatar button is pressed, an avatar image with the selected clothing/image is
+generated, see next point 3.
+
+3.
+The resulting outfit has three buttons: like, dislike and add to favorites.​
+Like and dislike buttons help the AI navigate the user's preferences​
+​
+When pressed Button Add to favorites , it shows pop-up window with:​
+- Headline : Add to collection​
+- Button Close (close window)​
+- All collections which was created by user​
+- Button: Create new collection ​
+​
+
+4. If there were more than 15 requests per month regarding outfit, a pop-up window appears:​
+Form Elements​
+Button: Close​
+Headline: Looks like you’ve used all your free outfit suggestions​
+Text: ​
+To keep styling without limits, switch to Pro and enjoy:​
+Unlimited outfits every day​
+Longer, more tailored responses that understand your style​
+Button: Upgrade to Pro Subscription
+5. If the user saves outfit for the first time, appears onboarding pop-up:
+Form Elements
+
+​
+​
+
+•
+
+Button: Skip
+
+•
+
+Text: “Create folders to organize your favorite looks and revisit them anytime”.​
+
+​
+​
+​
+​
+​
+
+​
+
+​
+
+​
+
+​
+
+​
+​
+​
+
+
